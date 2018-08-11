@@ -14,3 +14,8 @@ def index():
 def yin():
     account = request.form['account']
     return render_template('yin.html', account=account)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
