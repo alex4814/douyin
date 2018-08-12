@@ -2,11 +2,27 @@
 <html>
 
 <head>
-    <title>Processing</title>
+    <title>豆印 | {{ account }}</title>
+    <script>
+        function export_xlsx() {
+            var source = new EventSource("/export/xlsx/{{account}}");
+            source.onmessage = function (event) {
+                var btn = document.getElementById("export");
+                btn.disabled = true;
+                document.getElementById("test").value = `Progress (${event.data}%)`;
+                if (event.data >= 100) {
+                    source.close();
+                    btn.disabled = false;
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <p>Processing {{ account }}</p>
+    <p>Displaying {{ account }}</p>
+    <button id="export" type="submit" name="submit" value="export" onclick="export_xlsx()">Export</button>
+    <input id="test" type="text" value="haha">
 </body>
 
 </html>
