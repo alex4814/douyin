@@ -2,15 +2,14 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+import gdata
+
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    import json
-    with open('appdata/category.json', 'r') as f:
-        category = json.load(f)
-    return render_template('index.html', category=category)
+    return render_template('index.html', category=gdata.category)
 
 
 @app.route('/yin', methods=['POST'])

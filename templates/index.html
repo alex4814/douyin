@@ -16,7 +16,7 @@
         <ul>
           {% for c, v in category.items() %} {% if v.enable %}
           <li>
-            <input id={{c}} type="checkbox" name="include" value={{c}}>
+            <input id={{c}} type="checkbox" name={{c}}>
             <label for={{c}}>{{v.display}}</label>
           </li>
           {% endif %} {% endfor %}
