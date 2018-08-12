@@ -1,0 +1,65 @@
+{
+    "book": {
+        "index": 0,
+        "display": "图书",
+        "url": "https://book.douban.com/",
+        "auth": false,
+        "enable": true
+    },
+    "movie": {
+        "index": 1,
+        "display": "电影",
+        "url": "https://movie.douban.com/",
+        "auth": false,
+        "enable": true
+    },
+    "music": {
+        "index": 10,
+        "display": "音乐",
+        "url": "https://music.douban.com/",
+        "auth": false,
+        "enable": false
+    },
+    "event": {
+        "index": 4,
+        "display": "同城",
+        "url": "https://www.douban.com/location/",
+        "auth": false,
+        "enable": false
+    },
+    "shuo": {
+        "index": 6,
+        "display": "广播",
+        "url": "https://www.douban.com/",
+        "auth": true,
+        "enable": false
+    },
+    "notes": {
+        "index": 7,
+        "display": "日记",
+        "url": "https://www.douban.com/mine/notes",
+        "auth": true,
+        "enable": false
+    },
+    "album": {
+        "index": 8,
+        "display": "相册",
+        "url": "https://www.douban.com/mine/photos",
+        "auth": true,
+        "enable": false
+    },
+    "online": {
+        "index": 15,
+        "display": "线上活动",
+        "url": "https://www.douban.com/online/",
+        "auth": false,
+        "enable": false
+    },
+    "travel": {
+        "index": 20,
+        "display": "我去",
+        "url": "",
+        "auth": false,
+        "enable": false
+    }
+}

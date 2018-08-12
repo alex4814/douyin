@@ -7,7 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    import json
+    with open('appdata/category.json', 'r') as f:
+        category = json.load(f)
+    return render_template('index.html', category=category)
 
 
 @app.route('/yin', methods=['POST'])
